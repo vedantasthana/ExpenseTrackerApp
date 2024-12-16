@@ -125,10 +125,10 @@ function Profile() {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-gray-200 p-6">
         <div className="text-2xl font-semibold mb-4">Profile</div>
   
-        <div className="bg-white shadow-md rounded-lg p-6 mb-6">
+        <div className="bg-gray-400 shadow-md rounded-lg p-6 mb-6">
           <h2 className="text-xl font-semibold mb-4">Update Profile</h2>
           <form onSubmit={handleUpdate} className="space-y-4">
             <div>
@@ -155,14 +155,14 @@ function Profile() {
             </div>
             <button
               type="submit"
-              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+              className="bg-green-500 text-gray-600 py-2 px-4 rounded-lg hover:bg-green-600"
             >
               Update
             </button>
           </form>
         </div>
   
-        <div className="bg-white shadow-md rounded-lg p-6">
+        <div className="bg-gray-400 shadow-md rounded-lg p-6">
           <h2 className="text-xl font-semibold mb-4">Change Password</h2>
           <form onSubmit={handleChangePassword} className="space-y-4">
             <div>
@@ -200,7 +200,7 @@ function Profile() {
             </div>
             <button
               type="submit"
-              className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+              className="bg-green-500 text-gray-600 py-2 px-4 rounded-lg hover:bg-green-600"
             >
               Change Password
             </button>

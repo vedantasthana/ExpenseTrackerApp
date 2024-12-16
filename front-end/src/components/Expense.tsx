@@ -203,7 +203,7 @@ function Expense() {
         <div className="flex justify-between items-center">
           <h2 className="text-xl font-semibold mb-4">Expense Overview</h2>
           <button
-            className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+            className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700"
             onClick={() => setView(view === 'bar' ? 'pie' : 'bar')}
           >
             {view === 'bar' ? 'Switch to Pie Chart' : 'Switch to Bar Chart'}
@@ -221,7 +221,7 @@ function Expense() {
       {/* Add Expense Button */}
       <div className="mb-6 text-right">
         <button
-          className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700"
+          className="bg-red-400 text-white py-2 px-4 rounded-lg hover:bg-red-500"
           onClick={resetForm}
         >
           Add Expense
@@ -347,7 +347,7 @@ function Expense() {
                 </button>
                 <button
                   type="submit"
-                  className="bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700"
+                  className="bg-red-400 text-white py-2 px-4 rounded-lg hover:bg-red-500"
                 >
                   {isEditMode ? 'Update Expense' : 'Add Expense'}
                 </button>

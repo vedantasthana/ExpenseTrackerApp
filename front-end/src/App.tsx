@@ -7,7 +7,6 @@ import RegisterForm from "./components/RegisterForm";
 // import Expense from "./components/Expense";
 // import Profile from "./components/Profile";
 import AuthProvider from "./context/AuthContext";
-import Footer from "./navbar/Footer";
 import Header from "./navbar/Header";
 import DashboardPage from "./components/DashboardPage";
 import './index.css';
@@ -31,7 +30,6 @@ const App: React.FC = () => {
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
-      <Footer/>
       </AuthProvider>
     </Router>
   )	

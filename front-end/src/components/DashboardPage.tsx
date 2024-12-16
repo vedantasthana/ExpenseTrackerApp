@@ -117,11 +117,11 @@ export default function DashboardPage() {
             </div>
 
             {/* User Data Summary */}
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-gray-400 shadow-lg rounded-lg p-6">
                 <h2 className="text-2xl font-semibold mb-6 text-gray-800">Your Summary</h2>
                 
                 <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-blue-200 p-6 rounded-lg text-center hover:bg-blue-300 transition ease-in-out duration-200">
+                    <div className="bg-red-200 p-6 rounded-lg text-center hover:bg-red-300 transition ease-in-out duration-200">
                     <Link to="/expenses">
                         <h3 className="text-lg font-medium text-gray-700">Total Expenses</h3>
                         <p className="text-3xl font-bold text-gray-900">
@@ -130,13 +130,13 @@ export default function DashboardPage() {
                     </Link>
                     </div>
 
-                    <div className="bg-green-200 p-6 rounded-lg text-center hover:bg-green-300 transition ease-in-out duration-200">
+                    <div className="bg-purple-200 p-6 rounded-lg text-center hover:bg-purple-300 transition ease-in-out duration-200">
                     <h3 className="text-lg font-medium text-gray-700">Group Details</h3>
                     {groupsDetails && groupsDetails.length > 0 ? (
                         <ul className="mt-2">
                         {groupsDetails.map((group) => (
                             <li key={group.id} className="mb-2 text-sm font-medium text-gray-700">
-                            <a href={`${group.id}/group`} className="hover:underline hover:text-green-600">
+                            <a href={`${group.id}/group`} className="hover:underline hover:text-black-600">
                                 {group.name}
                             </a>
                             </li>
@@ -149,7 +149,7 @@ export default function DashboardPage() {
 
                     <div className="col-span-2 flex justify-center">
                     <button
-                        className="bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition ease-in-out duration-200"
+                        className="bg-gray-600 text-white py-3 px-6 rounded-lg hover:bg-gray-700 transition ease-in-out duration-200"
                         onClick={() => setIsModalOpen(true)}
                     >
                         Add Group
@@ -185,7 +185,7 @@ export default function DashboardPage() {
                                 Cancel
                             </button>
                             <button
-                                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                                className="bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700"
                                 onClick={handleAddGroup}
                             >
                                 Add Group

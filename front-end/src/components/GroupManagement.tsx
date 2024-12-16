@@ -501,28 +501,28 @@ function GroupManagement() {
   
 
     return (
-        <div className="min-h-screen bg-gray-100 p-6">
+        <div className="min-h-screen bg-gray-200 p-6">
             {/* Group Information */}
-            <div className="bg-white shadow-lg rounded-lg p-6 mb-6">
+            <div className="bg-gray-400 shadow-lg rounded-lg p-6 mb-6">
                 <h1 className="text-3xl font-bold text-gray-800 mb-2">{group?.name}</h1>
                 <p className="text-gray-600 mb-4">Admin: <span className="font-medium text-gray-800">{group.adminName}</span></p>
                 <p className="text-gray-600 mb-4">Date Created: <span className="font-medium text-gray-800">{new Date(group.date).toLocaleDateString()}</span></p>
                 
                 <div className="flex flex-wrap gap-4">
                     <button
-                        className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300"
+                        className="flex-1 bg-green-400 text-gray-600 py-2 px-4 rounded-lg hover:bg-green-500 transition-colors duration-300"
                         onClick={() => setIsModalOpen(true)}
                     >
                         Add User
                     </button>
                     <button
-                        className="flex-1 bg-yellow-500 text-white py-2 px-4 rounded-lg hover:bg-yellow-600 transition-colors duration-300"
+                        className="flex-1 bg-purple-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-purple-300 transition-colors duration-300"
                         onClick={() => {setIsEditGroupModalOpen(true); setNewGroup(group);}}
                     >
                         Edit Group
                     </button>
                     <button
-                        className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors duration-300"
+                        className="flex-1 bg-red-200 text-gray-900 py-2 px-4 rounded-lg hover:bg-red-300 transition-colors duration-300"
                         onClick={handleDeleteGroup}
                     >
                         Delete Group
@@ -532,23 +532,23 @@ function GroupManagement() {
 
 
             {/* Tabs */}
-            <div className="bg-white shadow-lg rounded-lg p-6">
+            <div className="bg-gray-400 shadow-lg rounded-lg p-6">
             {/* Tabs */}
             <div className="flex space-x-4 mb-6 border-b border-gray-300">
                 <button
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'splits' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'splits' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
                     onClick={() => handleTabChange('splits')}
                 >
                     Splits
                 </button>
                 <button
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'settlements' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'settlements' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
                     onClick={() => handleTabChange('settlements')}
                 >
                     Settlements
                 </button>
                 <button
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'users' ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700'}`}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors ${activeTab === 'users' ? 'bg-gray-600 text-white' : 'bg-gray-200 text-gray-700'}`}
                     onClick={() => handleTabChange('users')}
                 >
                     Users
@@ -559,7 +559,7 @@ function GroupManagement() {
             {activeTab === 'splits' && (
                 <div>
                     <button
-                        className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors mb-4"
+                        className="bg-green-400 text-gray-700 py-2 px-4 rounded-lg hover:bg-green-500 transition-colors mb-4"
                         onClick={() => setIsSplitModalOpen(true)}
                     >
                         Add Split
@@ -632,7 +632,7 @@ function GroupManagement() {
                         <li key={user.id} className="flex justify-between items-center p-4 border-b border-gray-300 hover:bg-gray-50 transition-colors">
                             <span className="font-semibold text-lg">{user.username}</span>
                             <button
-                                className="bg-red-600 text-white py-2 px-4 rounded-lg hover:bg-red-700 transition-colors focus:outline-none"
+                                className="bg-red-200 text-gray-800 py-2 px-4 rounded-lg hover:bg-red-300 transition-colors focus:outline-none"
                                 onClick={(event) => removeUser(user, event)}
                             >
                                 Delete
@@ -670,7 +670,7 @@ function GroupManagement() {
                                 Cancel
                             </button>
                             <button
-                                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                                className="bg-green-400 text-gray-700 py-2 px-4 rounded-lg hover:bg-green-500"
                                 onClick={addUser}
                                 disabled={!selectedUser}
                             >
@@ -759,7 +759,7 @@ function GroupManagement() {
                                 Cancel
                             </button>
                             <button
-                                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                                className="bg-green-400 text-gray-700 py-2 px-4 rounded-lg hover:bg-green-500"
                                 onClick={addSplit}
                                 disabled={!newSplit.amount || !newSplit.payerId || !newSplit.payeeId || !newSplit.categoryName}
                             >
@@ -862,7 +862,7 @@ function GroupManagement() {
             {isEditGroupModalOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
                     <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
-                        <h2 className="text-xl font-semibold mb-4">Add New Group</h2>
+                        <h2 className="text-xl font-semibold mb-4">Edit Group</h2>
                         <input
                             type="text"
                             value={newGroup.name}
@@ -884,7 +884,7 @@ function GroupManagement() {
                                 Cancel
                             </button>
                             <button
-                                className="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700"
+                                className="bg-green-400 text-gray-700 py-2 px-4 rounded-lg hover:bg-green-500"
                                 onClick={(event) => handleUpdateGroup(group, event)}
                             >
                                 Update Group

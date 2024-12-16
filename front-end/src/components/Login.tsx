@@ -80,55 +80,55 @@ export default function Login() {
 
     return (
         <>
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <div className="w-full max-w-md p-8 space-y-4 bg-white rounded shadow-lg">
-          <h2 className="text-2xl font-bold text-center">Login</h2>
-          {isUpdate === "true" && <p className="text-red-500">{update} has been updated</p>}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-                Username
-              </label>
-              <input
-                type="name"
-                id="email"
-                value={username}
-                onChange={handleUsernameChange}
-                className="w-full p-2 mt-1 border border-gray-300 rounded"
-                required
-              />
-            </div>
-            <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-700">
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                value={password}
-                onChange={handlePasswordChange}
-                className="w-full p-2 mt-1 border border-gray-300 rounded"
-                required
-              />
-              {passwordError && <p className="text-red-500">{passwordError}</p>}
-            </div>
-            <div className="flex items-center justify-between">
-              <a href="/forgot-password" className="text-sm text-blue-600 hover:underline">
-                Forgot Password?
-              </a>
-              {error && <p className="text-red-500">{error}</p>}
-              
-              <button
-                type="submit"
-                className="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-700"
-              >
-                Login
-              </button>
+          <div className="flex items-center justify-center min-h-screen bg-gray-100" >
+            <div className="w-full max-w-md p-8 space-y-4 bg-green-300 rounded shadow-lg" style={{ marginTop: '-200px' }}>
+              <h2 className="text-2xl font-bold text-center">Login</h2>
+              {isUpdate === "true" && <p className="text-red-500">{update} has been updated</p>}
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-700">
+                    Username
+                  </label>
+                  <input
+                    type="name"
+                    id="email"
+                    value={username}
+                    onChange={handleUsernameChange}
+                    className="w-full p-2 mt-1 border border-gray-300 rounded bg-gray-100"
+                    required
+                  />
+                </div>
+                <div>
+                  <label htmlFor="password" className="block text-sm font-medium text-gray-700">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    id="password"
+                    value={password}
+                    onChange={handlePasswordChange}
+                    className="w-full p-2 mt-1 border border-gray-300 rounded bg-gray-100"
+                    required
+                  />
+                  {passwordError && <p className="text-red-500">{passwordError}</p>}
+                </div>
+                <div className="flex items-center justify-between" style={{justifyContent:'center'}}>
+                  {/* <a href="/forgot-password" className="text-sm text-gray-600 hover:underline">
+                    Forgot Password?
+                  </a> */}
+                  {error && <p className="text-red-500">{error}</p>}
 
+                  <button
+                    type="submit"
+                    className="px-4 py-2 text-white bg-gray-600 rounded hover:bg-gray-700"
+                    
+                  >
+                    Login
+                  </button>
+                </div>
+              </form>
             </div>
-          </form>
-        </div>
-      </div>
-      </>
+          </div>
+       </>
     );
 }
