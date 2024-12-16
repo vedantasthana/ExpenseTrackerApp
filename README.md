@@ -9,7 +9,6 @@ To run this project, you will need the following dependencies installed:
 - **JDK 17**
 - **Apache Maven**
 - **PostgreSQL**
-- **H2 Database**
 
 ### Frontend
 
@@ -29,6 +28,10 @@ git clone <repository_url>
 ```
 ## Setup
 Once you've cloned the repository, follow these steps:
+
+- Setup Database <your_database_name> in postgresql using schema.sql
+
+Once you have the database set up (including tables), follow these steps:
 
 - Open two terminals:
 
