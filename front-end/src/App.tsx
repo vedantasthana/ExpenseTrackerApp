@@ -29,6 +29,7 @@ const App: React.FC = () => {
         <Route path="/expenses" element={<Expense />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="*" element={<NotFoundPage />} />
+        <Route path="/" element={<Login />} />
       </Routes>
       </AuthProvider>
     </Router>

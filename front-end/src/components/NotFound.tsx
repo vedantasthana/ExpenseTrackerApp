@@ -14,7 +14,7 @@ function NotFoundPage(){
         <p className="text-2xl text-gray-600 mb-8">Oops! The page you're looking for does not exist.</p>
         <button
           onClick={redirectToDashboard}
-          className="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition duration-300"
+          className="bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-300"
         >
           Go to Dashboard
         </button>
