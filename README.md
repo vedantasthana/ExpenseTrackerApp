@@ -1,4 +1,4 @@
-# ExpenseTrackr
+# Expense Tracker Application
 
 ## Installation and Dependencies
 
@@ -16,7 +16,6 @@ For the frontend, ensure you have the following installed:
 
 - **Node.js**
 - **npm**
-- **Vite**
 - **TypeScript**
 
 ## Cloning the Repository
@@ -62,7 +61,7 @@ root_directory/frontend> npm install
 Once the setup is done, follow these steps to run the application:
 - In the root terminal, run:
 ```bash
-root_directory> mvnw spring-boot:run
+root_directory> mvn spring-boot:run
 ```
 
 - In the "_frontend_" folder terminal, run:
